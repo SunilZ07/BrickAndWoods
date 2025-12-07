@@ -3,39 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bricks And Woods - Honest Civil Works & Fair Pricing</title>
-    <!-- Load Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Load Poppins from Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        /* Define the custom color and font settings */
-        :root {
-            --color-primary: #223628;
-            --color-accent: #D65A31; /* Burnt Orange/Brick for accents */
-        }
-        .bg-primary { background-color: var(--color-primary); }
-        .text-primary { color: var(--color-primary); }
-        .bg-accent { background-color: var(--color-accent); }
-        .hover\:bg-accent-dark:hover { background-color: #B94C2B; }
-        .font-aristotelica { font-family: 'Poppins', sans-serif; } /* Using Poppins as a substitute for Aristotelica Pro Bold */
-
-        /* Custom scrollbar styling for a cleaner look */
-        body::-webkit-scrollbar { width: 8px; }
-        body::-webkit-scrollbar-track { background: #f1f1f1; }
-        body::-webkit-scrollbar-thumb { background: var(--color-primary); border-radius: 4px; }
-        body::-webkit-scrollbar-thumb:hover { background: #3b5444; }
-
-        /* Ensure smooth scrolling */
-        html { scroll-behavior: smooth; }
-        
-        /* Utility for wood grain pattern (SVG inline) */
-        .wood-pattern {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cpath fill='none' stroke='rgba(255,255,255,0.1)' stroke-width='1.5' d='M0 50 L100 50 M0 25 L100 25 M0 75 L100 75 M50 0 L50 100 M25 0 L25 100 M75 0 L75 100'/%3E%3C/svg%3E");
-            background-size: 100px 100px;
-        }
-
-    </style>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <title>Bricks And Woods - End to End Civil Works</title>
+    <!-- Load Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Poppins from Google Fonts --><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <script>
         tailwind.config = {
             theme: {
@@ -54,35 +26,28 @@
 </head>
 <body class="font-aristotelica antialiased">
 
-    <!-- Header & Navigation -->
-    <header class="bg-primary shadow-lg sticky top-0 z-50">
+    <!-- Header & Navigation --><header class="bg-primary shadow-lg sticky top-0 z-50">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center py-4">
-            <!-- Logo/Brand Name -->
-            <a href="#hero" class="text-2xl font-extrabold text-white tracking-widest uppercase">
-                Bricks &amp; <span class="text-accent">Woods</span>
-            </a>
+            <!-- Logo/Brand Image --><a href="#hero" class="flex items-center">
+                <img src="assets/Logo.png" alt="Bricks & Woods Logo" class="h-10"> <!-- Adjust height as needed --></a>
 
-            <!-- Navigation Links (Hidden on mobile) -->
-            <div class="hidden md:flex space-x-8">
+            <!-- Navigation Links (Hidden on mobile) --><div class="hidden md:flex space-x-8">
                 <a href="#services" class="text-white hover:text-accent transition duration-300">Services</a>
                 <a href="#values" class="text-white hover:text-accent transition duration-300">Our Values</a>
                 <a href="#gallery" class="text-white hover:text-accent transition duration-300">Gallery</a>
             </div>
 
-            <!-- CTA Button -->
-            <a href="#contact" class="hidden md:block bg-accent text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-accent-dark transition duration-300 transform hover:scale-105">
-                Get a Fair Quote
+            <!-- CTA Button --><a href="#contact" class="hidden md:block bg-accent text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-accent-dark transition duration-300 transform hover:scale-105">
+                Get a Quote <img src="assets/Whatsapp-icon.svg" alt="WhatsApp Icon" class="inline h-5 w-5 ml-2">
             </a>
 
-            <!-- Mobile Menu Button (Hamburger) -->
-            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+            <!-- Mobile Menu Button (Hamburger) --><button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </nav>
     </header>
 
-    <!-- Mobile Menu (Hidden by default) -->
-    <div id="mobile-menu" class="hidden md:hidden bg-primary w-full shadow-lg z-40 absolute">
+    <!-- Mobile Menu (Hidden by default) --><div id="mobile-menu" class="hidden md:hidden bg-primary w-full shadow-lg z-40 absolute">
         <div class="flex flex-col p-4 space-y-3">
             <a href="#services" class="text-white hover:text-accent transition duration-300 py-2" onclick="toggleMenu()">Services</a>
             <a href="#values" class="text-white hover:text-accent transition duration-300 py-2" onclick="toggleMenu()">Our Values</a>
@@ -93,86 +58,71 @@
         </div>
     </div>
 
-    <!-- 1. Hero Section -->
-    <section id="hero" class="bg-primary wood-pattern relative overflow-hidden">
+    <!-- 1. Hero Section --><section id="hero" class="bg-primary wood-pattern relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-36 text-center">
             <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight">
-                Building Trust, <br class="md:hidden"/> One <span class="text-accent">Honest Quote</span> at a Time
+                No <span class="text-accent">Middleman</span> Cuts, <br class="md:hidden"/> Only <span class="text-accent">Quality</span> Work
             </h1>
             <p class="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
-                Your single source for comprehensive civil works—from **Tiling to Furniture**, delivered with **honesty** and **fair pricing**.
+                Your single source for comprehensive civil works—from <b>Tiling to Furniture</b>, delivered with <b>honesty</b> and <b>fair pricing.</b>
             </p>
             <a href="#contact" class="inline-block bg-accent text-white font-bold text-lg py-4 px-10 rounded-full shadow-2xl transition duration-300 transform hover:scale-105 hover:shadow-accent/50">
-                Start Your Project Today &rarr;
+                Start Your Project Today
             </a>
         </div>
     </section>
 
-    <!-- 2. Value Proposition Section -->
-    <section id="values" class="py-16 md:py-24 bg-white">
+    <!-- 2. Value Proposition Section --><section id="values" class="py-16 md:py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-extrabold text-primary text-center mb-12">Our Foundational Promises</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Value 1: Honesty -->
-                <div class="bg-white p-8 rounded-xl shadow-2xl text-center border-t-4 border-accent transition duration-500 hover:shadow-primary/20">
+                <!-- Value 1: Honesty --><div class="bg-white p-8 rounded-xl shadow-2xl text-center border-t-4 border-accent transition duration-500 hover:shadow-primary/20">
                     <div class="text-5xl text-accent mb-4">
-                        <span aria-hidden="true">&#x1F4AF;</span> <!-- 100/Trust Icon -->
-                    </div>
-                    <h3 class="text-2xl font-semibold text-primary mb-3">Complete Transparency</h3>
-                    <p class="text-gray-600">No hidden costs, no surprise additions. We detail every expense and material cost upfront, ensuring full confidence in your investment.</p>
+                        <span aria-hidden="true">&#x1F4AF;</span> <!-- 100/Trust Icon --></div>
+                    <h3 class="text-2xl font-semibold text-primary mb-3">No Middlemen</h3>
+                    <p class="text-gray-600">We handle every project ourselves with no outside contractors or middleman fees. By working directly with you, we keep everything simple, transparent, and fairly priced—so you always get exactly what you pay for 😇.</p>
                 </div>
 
-                <!-- Value 2: Fair Pricing -->
-                <div class="bg-white p-8 rounded-xl shadow-2xl text-center border-t-4 border-accent transition duration-500 hover:shadow-primary/20">
+                <!-- Value 3: Comprehensive Service --><div class="bg-white p-8 rounded-xl shadow-2xl text-center border-t-4 border-accent transition duration-500 hover:shadow-primary/20">
                     <div class="text-5xl text-accent mb-4">
-                        <span aria-hidden="true">&#x1F4B8;</span> <!-- Money Wings Icon -->
-                    </div>
-                    <h3 class="text-2xl font-semibold text-primary mb-3">Guaranteed Fair Value</h3>
-                    <p class="text-gray-600">We optimize processes to deliver premium quality work without the premium price tag. Get the best possible service for your budget.</p>
-                </div>
-
-                <!-- Value 3: Comprehensive Service -->
-                <div class="bg-white p-8 rounded-xl shadow-2xl text-center border-t-4 border-accent transition duration-500 hover:shadow-primary/20">
-                    <div class="text-5xl text-accent mb-4">
-                        <span aria-hidden="true">&#x1F3D7;&#xFE0F;</span> <!-- Construction Icon -->
-                    </div>
+                        <span aria-hidden="true">&#x1F3D7;&#xFE0F;</span> <!-- Construction Icon --></div>
                     <h3 class="text-2xl font-semibold text-primary mb-3">End-to-End Civil Works</h3>
                     <p class="text-gray-600">Why juggle multiple contractors? We handle everything: Painting, Furniture, POP, Wiring, Tiling, and full civil structure work.</p>
+                </div>
+                <!-- Value 2: Fair Pricing --><div class="bg-white p-8 rounded-xl shadow-2xl text-center border-t-4 border-accent transition duration-500 hover:shadow-primary/20">
+                    <div class="text-5xl text-accent mb-4">
+                        <span aria-hidden="true">&#x1F4B8;</span> <!-- Money Wings Icon --></div>
+                    <h3 class="text-2xl font-semibold text-primary mb-3">Customer-Centric Approach</h3>
+                    <p class="text-gray-600">Your vision, satisfaction, and peace of mind are our top priorities &#x1F60A;. We maintain clear communication throughout the project.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 3. Services Section -->
-    <section id="services" class="py-16 md:py-24 bg-gray-50">
+    <!-- 3. Services Section --><section id="services" class="py-16 md:py-24 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-extrabold text-primary text-center mb-12">Our Expert Services</h2>
             <p class="text-center text-lg text-gray-600 mb-16 max-w-4xl mx-auto">We integrate every step of your project, ensuring seamless quality control and timely delivery across all domains of civil finishing work.</p>
 
             <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
-                <!-- Service 1: Painting -->
-                <div class="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <span class="text-5xl text-accent mb-3">&#x1F3A8;</span>
+                <!-- Service 1: Painting --><div class="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <span class="text-5xl text-accent mb-3"><img src="assets/paint-roller-icon.svg" class="wid-55"></span>
                     <p class="text-xl font-semibold text-primary text-center">Painting & Finishes</p>
                 </div>
-                <!-- Service 2: Furniture -->
-                <div class="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <span class="text-5xl text-accent mb-3">&#x1F4C0;</span>
+                <!-- Service 2: Furniture --><div class="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <span class="text-5xl text-accent mb-3"><img src="assets/furniture-icon.svg" class="wid-55"> </span>
                     <p class="text-xl font-semibold text-primary text-center">Custom Furniture</p>
                 </div>
-                <!-- Service 3: POP/False Ceiling -->
-                <div class="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <span class="text-5xl text-accent mb-3">&#x26F0;&#xFE0F;</span>
+                <!-- Service 3: POP/False Ceiling --><div class="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <span class="text-5xl text-accent mb-3"><img src="assets/ceiling-icon.png" class="wid-55"></span>
                     <p class="text-xl font-semibold text-primary text-center">POP & Ceilings</p>
                 </div>
-                <!-- Service 4: Wiring -->
-                <div class="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <span class="text-5xl text-accent mb-3">&#x1F50C;</span>
+                <!-- Service 4: Wiring --><div class="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <span class="text-5xl text-accent mb-3 wid-55">&#x1F50C;</span>
                     <p class="text-xl font-semibold text-primary text-center">Electrical Wiring</p>
                 </div>
-                <!-- Service 5: Tiling -->
-                <div class="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300">
-                    <span class="text-5xl text-accent mb-3">&#x1F528;</span>
+                <!-- Service 5: Tiling --><div class="flex flex-col items-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+                    <span class="text-5xl text-accent mb-3"><img src="assets/tiles-icon.svg" class="wid-55"></span>
                     <p class="text-xl font-semibold text-primary text-center">Flooring & Tiling</p>
                 </div>
             </div>
@@ -185,24 +135,23 @@
         </div>
     </section>
 
-    <!-- 4. Project Gallery (Placeholder) -->
-    <section id="gallery" class="py-16 md:py-24 bg-primary text-white">
+    <!-- 4. Project Gallery (Placeholder) --><section id="gallery" class="py-16 md:py-24 bg-primary text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-4xl font-extrabold text-white text-center mb-12">See Our Quality in Action</h2>
             <p class="text-center text-lg text-gray-300 mb-16 max-w-4xl mx-auto">From modern kitchen finishes to intricate POP designs, we deliver excellence that lasts.</p>
 
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                 <div class="aspect-square rounded-xl overflow-hidden shadow-xl group cursor-pointer transform transition duration-500 hover:scale-[1.02]">
-                    <img src="https://placehold.co/400x400/3B5444/FFFFFF?text=Tiling+Work" alt="Finished Tiling Project" class="w-full h-full object-cover group-hover:opacity-80 transition duration-300">
+                    <img src="assets/Tiling-works.png" alt="Finished Tiling Project" class="w-full h-full object-cover group-hover:opacity-80 transition duration-300">
                 </div>
                 <div class="aspect-square rounded-xl overflow-hidden shadow-xl group cursor-pointer transform transition duration-500 hover:scale-[1.02]">
-                    <img src="https://placehold.co/400x400/5A6B53/FFFFFF?text=Custom+Furniture" alt="Custom-built wooden furniture" class="w-full h-full object-cover group-hover:opacity-80 transition duration-300">
+                    <img src="assets/furniture-works.png" alt="Custom-built wooden furniture" class="w-full h-full object-cover group-hover:opacity-80 transition duration-300">
                 </div>
                 <div class="aspect-square rounded-xl overflow-hidden shadow-xl group cursor-pointer transform transition duration-500 hover:scale-[1.02]">
-                    <img src="https://placehold.co/400x400/D65A31/FFFFFF?text=POP+Ceiling" alt="Intricate POP ceiling design" class="w-full h-full object-cover group-hover:opacity-80 transition duration-300">
+                    <img src="assets/POP-works.png" alt="Intricate POP ceiling design" class="w-full h-full object-cover group-hover:opacity-80 transition duration-300">
                 </div>
                 <div class="aspect-square rounded-xl overflow-hidden shadow-xl group cursor-pointer transform transition duration-500 hover:scale-[1.02]">
-                    <img src="https://placehold.co/400x400/223628/FFFFFF?text=Painting+Finish" alt="High-quality interior paint finish" class="w-full h-full object-cover group-hover:opacity-80 transition duration-300">
+                    <img src="assets/painting-works.png" alt="High-quality interior paint finish" class="w-full h-full object-cover group-hover:opacity-80 transition duration-300">
                 </div>
             </div>
             <div class="text-center mt-12">
@@ -211,55 +160,54 @@
         </div>
     </section>
 
-    <!-- 5. Contact / CTA Section -->
-    <section id="contact" class="py-16 md:py-24 bg-gray-50">
+    <!-- 5. Contact / CTA Section --><section id="contact" class="py-16 md:py-24 bg-gray-50">
         <div class="max-w-xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-extrabold text-primary text-center mb-6">Ready to Build With Trust?</h2>
-            <p class="text-center text-lg text-gray-600 mb-10">Tell us about your project below and receive a genuinely fair and transparent quote within 24 hours.</p>
+            <h2 class="text-4xl font-extrabold text-primary text-center mb-6">Ready to Build your Home ?</h2>
+            <p class="text-center text-lg text-gray-600 mb-10">Tell us about your project below and receive a quote via WhatsApp or a call within 24 hours.</p>
+           
 
-            <!-- Contact Form -->
-            <form id="contact-form" class="bg-white p-8 rounded-xl shadow-2xl space-y-4">
+            <!-- Contact Form --><form id="contact-form" class="bg-white p-8 rounded-xl shadow-2xl space-y-4">
                 <div>
-                    <label for="name" class="block text-sm font-medium text-gray-700">Your Full Name</label>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Your Good Name</label>
                     <input type="text" id="name" name="name" required class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3 focus:ring-accent focus:border-accent">
                 </div>
-                <div>
+                <!-- <div>
                     <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number (Preferred Contact)</label>
                     <input type="tel" id="phone" name="phone" required class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3 focus:ring-accent focus:border-accent">
-                </div>
+                </div> -->
                 <div>
                     <label for="project" class="block text-sm font-medium text-gray-700">Project Details (e.g., Tiling for 3 rooms, Full Interior Renovation)</label>
                     <textarea id="project" name="project" rows="4" required class="mt-1 block w-full border border-gray-300 rounded-lg shadow-sm p-3 focus:ring-accent focus:border-accent"></textarea>
                 </div>
                 <button type="submit" class="w-full bg-primary text-white font-bold py-3 rounded-lg shadow-md transition duration-300 hover:bg-accent transform hover:scale-[1.01] hover:shadow-lg">
-                    Submit for Fair Quote
+                    Ping Us On WhatsApp<img src="assets/Whatsapp-icon.svg" alt="WhatsApp Icon" class="inline h-5 w-5 ml-2">
                 </button>
+                <p class="text-center text-sm text-gray-600 mt-2">
+                We won’t spam you — pinky promise 🥹</p>
             </form>
-
-            <div id="success-message" class="hidden mt-6 bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded-lg" role="alert">
+ 
+            <!-- Success message kept hidden, as redirection is now the primary action --><div id="success-message" class="hidden mt-6 bg-green-100 border-l-4 border-green-500 text-green-700 p-4 rounded-lg" role="alert">
                 <p class="font-bold">Success!</p>
-                <p>Thank you for reaching out. We will review your request and contact you shortly with a fair quote.</p>
+                <p>Redirecting you to WhatsApp now...</p>
             </div>
         </div>
     </section>
 
 
-    <!-- Footer -->
-    <footer class="bg-primary text-gray-400 py-10">
+    <!-- Footer --><footer class="bg-primary text-gray-400 py-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <p class="text-2xl font-extrabold text-white tracking-widest uppercase mb-4">Bricks &amp; <span class="text-accent">Woods</span></p>
-            <p class="mb-4">Honest Civil Works | Fair Prices | End-to-End Service</p>
-            <div class="flex justify-center space-x-6 text-xl">
-                <!-- Placeholder Icons for Social Media -->
-                <a href="#" class="hover:text-white transition duration-300"><span aria-hidden="true">&#x2709;&#xFE0F;</span></a> <!-- Email -->
-                <a href="#" class="hover:text-white transition duration-300"><span aria-hidden="true">&#x1F4F1;</span></a> <!-- Phone -->
-            </div>
+            <p class="mb-4">Civil Works | Fair Prices | End-to-End Service</p>
+            <!-- <div class="flex justify-center space-x-6 text-xl">
+                
+                 <a href="#" class="hover:text-white transition duration-300"><span aria-hidden="true">&#x2709;&#xFE0F;</span></a> <a href="#" class="hover:text-white transition duration-300"><span aria-hidden="true">&#x1F4F1;</span></a></div> -->
             <p class="mt-6 text-sm">&copy; 2025 Bricks And Woods. All rights reserved.</p>
         </div>
     </footer>
 
+    
     <!-- JavaScript for Mobile Menu and Form Handling -->
-    <script>
+     <script>
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         const contactForm = document.getElementById('contact-form');
@@ -271,34 +219,44 @@
         }
         mobileMenuButton.addEventListener('click', toggleMenu);
 
-        // Simple Form Submission Handler (Prevents default submission and shows success message)
+        // WhatsApp Form Submission Handler
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            // In a real application, you would send this data to a backend server here.
-            // console.log('Form Submitted:', {
-            //     name: document.getElementById('name').value,
-            //     phone: document.getElementById('phone').value,
-            //     project: document.getElementById('project').value,
-            // });
 
-            // 1. Hide the form
-            contactForm.classList.add('hidden');
-            // 2. Show the success message
-            successMessage.classList.remove('hidden');
+            const name = document.getElementById('name').value;
+            const project = document.getElementById('project').value;
+            const submitButton = contactForm.querySelector('button[type="submit"]');
 
-            // 3. Optional: Smooth scroll to the success message
-            document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // Construct the detailed message for WhatsApp
+            const message = `*Quote Request from Bricks & Woods Landing Page*\n\n*Client Name:* ${name}\n\n*Project Details:*\n${project}`;
             
-            // 4. Reset the form after a delay (if user stays on page)
+            // WhatsApp phone number
+            const phoneNumber = '+919967741711'; // Replace with your actual number
+
+            // Encode the message for the URL
+            const encodedMessage = encodeURIComponent(message);
+            
+            // Construct the WhatsApp URL
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            console.log("Redirecting to WhatsApp URL:", whatsappUrl);
+            // UX feedback before redirection
+            const originalText = submitButton.textContent;
+            submitButton.textContent = "Opening WhatsApp...";
+            submitButton.disabled = true;
+
+            // Open the WhatsApp URL in a new tab
+            window.open(whatsappUrl, '_blank');
+
+            // Reset UX feedback and form after a short delay
             setTimeout(() => {
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
                 contactForm.reset();
-                successMessage.classList.add('hidden');
-                contactForm.classList.remove('hidden');
-            }, 8000); // Reset after 8 seconds
+            }, 1500);
+            
+            // Note: The form fields are reset after redirection.
         });
 
     </script>
-
 </body>
 </html>
